@@ -1,0 +1,19 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0e1a"><title>نافذة — تلفزيون مباشر</title>
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<header><div class="brand"><img src="icon.svg" alt=""><div><b>نافذة</b><small>تلفزيون مباشر</small></div></div>
+<input id="q" type="search" placeholder="ابحث عن قناة…"><button id="addBtn" class="ghost" title="إضافة قائمة">＋ قائمتي</button></header>
+<nav id="cats"></nav>
+<section id="recentWrap"><h2>شاهدت مؤخراً</h2><div id="recent" class="row"></div></section>
+<main id="grid" class="grid"></main>
+<footer>جميع الحقوق محفوظة © 2026 وطن النهار · القنوات المعروضة بثها مجاني ومنشور رسمياً من أصحابها.</footer>
+<div id="player" hidden><div class="pbar"><button id="close">✕</button><img id="plogo" alt=""><b id="pname"></b><span class="live">● مباشر</span><button id="fav2">☆</button><button id="fs">⛶</button></div>
+<video id="v" controls playsinline autoplay></video><div id="perr" hidden></div></div>
+<dialog id="dlg"><form method="dialog"><h3>أضف قائمتك (M3U)</h3>
+<p class="note">أنت مسؤول عن محتوى القوائم اللي تضيفها. التطبيق ما يوفر أي قنوات مدفوعة.</p>
+<input id="m3uUrl" type="url" placeholder="رابط القائمة https://…m3u"><label class="file">أو اختر ملف<input id="m3uFile" type="file" accept=".m3u,.m3u8,audio/x-mpegurl"></label>
+<div class="acts"><button id="m3uAdd" value="add">إضافة</button><button id="m3uClear" value="clr" class="ghost">حذف قوائمي</button><button value="x" class="ghost">إغلاق</button></div><p id="m3uMsg"></p></form></dialog>
+<script src="hls.min.js"></script><script src="app.js"></script></body></html>
